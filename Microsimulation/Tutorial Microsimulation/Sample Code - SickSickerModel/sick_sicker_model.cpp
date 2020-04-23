@@ -192,10 +192,6 @@ void MicroSim(vector<int> v_M_1, int n_i, int n_t, vector<int> v_n, double d_c, 
 
 
 int main(){
-  vector<double>result =  Probs(0);
-  for(int i = 0; i < result.size(); i++){
-    cout << result[i]<<" ";
-  }
   auto start = high_resolution_clock::now();
   bool Trt = true;
   MicroSim(v_M_1, n_i, n_t, v_n, d_c, d_e, true, true, Trt, 1);
