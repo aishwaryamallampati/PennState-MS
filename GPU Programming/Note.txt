@@ -1,0 +1,6 @@
+Kernel: Function that is launched directly onto the GPU by CUDA
+- To reiterate—the gpuarray.to_array function only can operate on NumPy array types.
+- gpuarray object destructor taking care of memory clean-up automatically when the end of the scope is reached.
+- lambda keyword in Python. This allows us to define an anonymous function
+- map(lambda x : x**2, [2,3,4]): output [4,9,16] - InclusiveScanFilter
+- reduce(lambda x, y : x + y, [1,2,3,4]) output: 10 - ReductionKernel
