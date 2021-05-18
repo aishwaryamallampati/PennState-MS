@@ -4,3 +4,11 @@ Kernel: Function that is launched directly onto the GPU by CUDA
 - lambda keyword in Python. This allows us to define an anonymous function
 - map(lambda x : x**2, [2,3,4]): output [4,9,16] - InclusiveScanFilter
 - reduce(lambda x, y : x + y, [1,2,3,4]) output: 10 - ReductionKernel
+Threads, blocks, and grids:
+- a thread is a sequence of instructions that is executed on a single core of the GPU
+- Multiple threads are executed on the GPU in abstract units known as blocks. 
+- Blocks are further executed in abstract batches known as grids, which are best thought of as blocks of blocks. 
+- Threads and blocks are indexed in 3 dimensions.
+- A CUDA device function is a serial C function that is called by an individual CUDA thread from within a kernel. 
+-- While these functions are serial in themselves, they can be run in parallel by multiple GPU threads. 
+-- Device functions cannot by themselves by launched by a host computer onto a GPU, only kernels.
